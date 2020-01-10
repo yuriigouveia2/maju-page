@@ -1,0 +1,9 @@
+.btn.btn-link {
+  color: #ffffff;
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn.btn-link:hover {
+  color: #F0F0F0;
+}
