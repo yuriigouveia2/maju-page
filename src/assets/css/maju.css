@@ -1,9 +1,20 @@
 .btn.btn-link {
-  color: #ffffff;
   border: none;
   text-decoration: none !important;
 }
 
-.btn.btn-link:hover {
-  color: #F0F0F0;
+.navbar-default.navbar-transparent .btn.btn-link {
+  color: #ffffff;
+}
+
+.navbar-default.navbar-transparent .btn.btn-link:hover {
+  color: #c7c5c5;
+}
+
+.navbar-default .btn.btn-link {
+  color: #434547;
+}
+
+.navbar-default .btn.btn-link:hover {
+  color: #222324;
 }
