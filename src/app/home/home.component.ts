@@ -54,4 +54,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   inProgressAnimation() {
     const inProgress = '';
   }
+
+  getYear() {
+    return new Date().getFullYear();
+  }
 }
