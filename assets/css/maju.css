@@ -1,0 +1,39 @@
+.btn.btn-link {
+  border: none;
+  text-decoration: none !important;
+}
+
+.navbar-default.navbar-transparent .btn.btn-link {
+  color: #ffffff;
+}
+
+.navbar-default.navbar-transparent .btn.btn-link:hover {
+  color: #c7c5c5;
+}
+
+.navbar-default .btn.btn-link {
+  color: #434547;
+}
+
+.navbar-default .btn.btn-link:hover {
+  color: #222324;
+}
+
+
+.text-black {
+  color: black
+}
+
+.filter .separator.black,
+.filter .description.text-black,
+.filter .button-get-started > .btn.text-black {
+  color: black;
+}
+
+.filter .separator.line-separator.black:before, .filter .separator.line-separator.black:after {
+  border-color: black;
+}
+
+.filter.bg-white::before {
+  background: white;
+}
