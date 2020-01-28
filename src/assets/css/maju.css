@@ -45,7 +45,12 @@
   width: 50%;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
+
+  .navbar-default.navbar-transparent .btn.btn-link {
+    width: 100%;
+    color: #434547;
+  }
 
   .section-header .content h1, .section-header .content h5, .section-header .content p {
     margin: 0;
@@ -67,4 +72,34 @@
     margin-bottom: 20px;
     margin-top: 15px;
   }
+
+  .card {
+    height: 420px !important;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 768px) {
+  .navbar-default.navbar-transparent .btn.btn-link {
+    width: 100%;
+    color: #434547;
+  }
+
+  .card {
+    height: 400px !important;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1024px){
+  .navbar-default.navbar-transparent .btn.btn-link {
+    width: 100%;
+    color: #434547;
+  }
+
+  .card {
+    height: 490px !important;
+  }
+}
+
+.card {
+  height: 430px;
 }
