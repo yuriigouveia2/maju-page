@@ -47,6 +47,11 @@
 
 @media (min-width: 769px) and (max-width: 992px) {
 
+  .navbar-default.navbar-transparent .btn.btn-link {
+    width: 100%;
+    color: #434547;
+  }
+
   .section-header .content h1, .section-header .content h5, .section-header .content p {
     margin: 0;
     margin-top: 10%;
@@ -74,12 +79,22 @@
 }
 
 @media (min-width: 1px) and (max-width: 768px) {
+  .navbar-default.navbar-transparent .btn.btn-link {
+    width: 100%;
+    color: #434547;
+  }
+
   .card {
     height: 400px !important;
   }
 }
 
 @media (min-width: 993px) and (max-width: 1024px){
+  .navbar-default.navbar-transparent .btn.btn-link {
+    width: 100%;
+    color: #434547;
+  }
+
   .card {
     height: 490px !important;
   }
