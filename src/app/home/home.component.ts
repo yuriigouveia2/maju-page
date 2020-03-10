@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import noUiSlider from 'nouislider';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalContatoComponent } from './modal-contato/modal-contato.component';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +16,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   date = new Date();
   pagination = 3;
   pagination1 = 1;
-  constructor() {}
+
+  closeResult: string;
+
+
+  constructor(
+    private modal: NgbModal
+  ) {}
 
   ngOnInit() {
     const body = document.getElementsByTagName('body')[0];
@@ -57,5 +65,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   getYear() {
     return new Date().getFullYear();
+  }
+
+  openModalContato() {
+    const modalRef = this.modal.open(ModalContatoComponent, {
+      size: 'sm'
+    });
   }
 }

@@ -24,8 +24,7 @@
 }
 
 .text-black {
-  color: black;
-  font-size: 15px;
+  color: black
 }
 
 .filter .separator.black,
@@ -103,23 +102,4 @@
 
 .card {
   height: 430px;
-}
-
-
-.modal-backdrop.fade
-{
-  opacity: 0.5 !important;
-}
-.modal-open .modal
-{
-  opacity: 1;
-}
-
-.modal-dialog.modal-lg {
-  margin-top: 170px;
-}
-
-
-.modal-content {
-  height: 100px !important;
 }
