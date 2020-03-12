@@ -69,7 +69,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   openModalContato() {
     const modalRef = this.modal.open(ModalContatoComponent, {
-      size: 'sm'
+      size: 'md',
+      windowClass: 'modal-animation',
+      centered: true
     });
   }
 }
