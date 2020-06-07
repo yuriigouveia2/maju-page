@@ -20,14 +20,17 @@
                 <button type="button" class="btn btn-link" (click)="scrollToElement(inicio)">
                   Início
                 </button>
-                <button type="button" class="btn btn-link" (click)="scrollToElement(sobre)">
+                <button type="button" class="btn btn-link" (click)="scrollToElement(servicos)">
                   Serviços
                 </button>
                 <button type="button" class="btn btn-link" (click)="scrollToElement(projetos)">
                   Projetos
                 </button>
-                <button type="button" class="btn btn-link" (click)="scrollToElement(midias)">
-                  Mídias Sociais
+                <button type="button" class="btn btn-link" (click)="scrollToElement(quemsomos)">
+                  Quem somos
+                </button>
+                <button type="button" class="btn btn-link" (click)="scrollToElement(contato)">
+                  Contato
                 </button>
             </ul>
         </div>
@@ -50,7 +53,7 @@
                 </div>
 
                 <div class="button-get-started">
-                    <button type="button" class="btn btn-white btn-fill btn-lg" (click)="scrollToElement(sobre)">
+                    <button type="button" class="btn btn-white btn-fill btn-lg" (click)="scrollToElement(servicos)">
                       Studio
                     </button>
                 </div>
@@ -61,7 +64,7 @@
   </div>
 
 
-  <div class="section" #sobre>
+  <div class="section" #servicos>
     <div class="container">
         <div class="row">
             <div class="title-area">
@@ -102,8 +105,56 @@
     </div>
   </div>
 
+  <div class="section section-projects" #projetos>
+    <div class="container">
+      <div class="row">
+        <div class="title-area">
+            <h2 class="white">Projetos</h2>
+            <div class="separator separator-danger white">✻</div>
+            <p class="description white">Esses são alguns de nossos projetos de renderização e pós-produção.</p>
+        </div>
+      </div>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
 
-  <div class="section section-our-team-freebie" #projetos>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img [src]="images[0]" alt="Los Angeles">
+          </div>
+
+          <div class="item">
+            <img [src]="images[1]" alt="Chicago">
+          </div>
+
+          <div class="item">
+            <img [src]="images[2]" alt="New york">
+          </div>
+
+          <div class="item">
+            <img [src]="images[3]" alt="New york">
+          </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="fa fa-chevron-left"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="fa fa-chevron-right"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section section-our-team-freebie" #quemsomos>
     <div class="parallax filter filter-color-black">
         <div class="image" style="background-image:url('assets/img/header-2.jpeg')">
         </div>
@@ -159,7 +210,7 @@
   </div>
 
 
-  <div class="section section-small section-get-started">
+  <div class="section section-small section-get-started" #contato>
     <div class="parallax filter bg-white">
         <div class="container">
             <div class="title-area">
@@ -169,7 +220,7 @@
             </div>
 
             <div class="button-get-started">
-                <a href="javascript:void(0)" (click)="openModalContato()" class="btn btn-danger btn-fill btn-lg">Entre em contato</a>
+                <a href="mailto:caroolinavieir@gmail.com" class="btn btn-danger btn-fill btn-lg">Entre em contato</a>
             </div>
         </div>
     </div>
@@ -214,5 +265,5 @@
             © {{ getYear() }} Maju Studio Render, para melhor apresentação de projetos arquitetônicos e de interiores
         </div>
     </div>
-</footer>
+  </footer>
 </div>

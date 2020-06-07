@@ -152,3 +152,30 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+.section-projects {
+  background-color: rgba(30, 30, 30, 0.97);
+  color: #DDDDDD;
+}
+
+.picsum-img-wrapper {
+  width: 60vh !important;
+}
+
+span.fa.fa-chevron-right, span.fa.fa-chevron-left{
+  position: absolute !important;
+  top: 50% !important;
+}
+
+.item img {
+  margin: auto;
+  width: auto;
+  height: 300px !important;
+}
+
+.white {
+  color: #CCCCCC !important;
+}
+.separator-danger.white:before, .separator-danger.white:after {
+  border-color: #CCCCCC;
+}

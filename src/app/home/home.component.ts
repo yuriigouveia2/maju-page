@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import noUiSlider from 'nouislider';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { ModalContatoComponent } from './modal-contato/modal-contato.component';
 
 @Component({
@@ -9,6 +9,8 @@ import { ModalContatoComponent } from './modal-contato/modal-contato.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
+
   isCollapsed = true;
   focus;
   focus1;
@@ -18,6 +20,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   pagination1 = 1;
 
   closeResult: string;
+
+  paused = false;
+  unpauseOnArrow = false;
+  pauseOnIndicator = false;
+  pauseOnHover = true;
+  images = [1, 2, 3, 4].map((n) => `../../assets/img/projects/${n}.png`);
 
 
   constructor(
@@ -50,6 +58,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     });
   }
+
   ngOnDestroy() {
     const body = document.getElementsByTagName('body')[0];
     body.classList.remove('index-page');
@@ -73,5 +82,24 @@ export class HomeComponent implements OnInit, OnDestroy {
       windowClass: 'modal-animation',
       centered: true
     });
+  }
+
+  togglePaused() {
+    if (this.paused) {
+      this.carousel.cycle();
+    } else {
+      this.carousel.pause();
+    }
+    this.paused = !this.paused;
+  }
+
+  onSlide(slideEvent: NgbSlideEvent) {
+    if (this.unpauseOnArrow && slideEvent.paused &&
+      (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)) {
+      this.togglePaused();
+    }
+    if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
+      this.togglePaused();
+    }
   }
 }
